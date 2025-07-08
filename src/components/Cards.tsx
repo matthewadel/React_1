@@ -3,7 +3,6 @@ import Double from '../assets/double.png';
 import Triple from '../assets/triple.png';
 
 export const Cards = () => {
-
     const Card = ({ image, planName, price }: { image: string, planName: string, price: string }) => {
         return (
             <div className="text-black w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
@@ -20,12 +19,13 @@ export const Cards = () => {
         )
     }
 
+
     return (
         <div className="w-full py-[10rem] px-4 bg-white">
             <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8">
-                {Card({ image: Single, planName: 'Single User', price: '$149' })}
-                {Card({ image: Double, planName: 'Partnership', price: '$199' })}
-                {Card({ image: Triple, planName: 'Group Account', price: '$299' })}
+                <Card image={Single} planName='Single User' price='$149' />
+                <Card image={Double} planName='Partnership' price='$199' />
+                <Card image={Triple} planName='Group Account' price='$299' />
             </div>
         </div>
     )
